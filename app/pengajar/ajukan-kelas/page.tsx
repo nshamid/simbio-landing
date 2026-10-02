@@ -134,6 +134,7 @@ export default function AjukanKelasPage() {
       jadwalMulai: jadwal.toISOString(),
       statusPengajuan: "menunggu",
       jumlahPendaftar: 0,
+      reviewBintang5: 0,
     };
     simpanKelasPengajar([...existing, baru]);
     router.push("/pengajar/dashboard");
