@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #2e5fe8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: #16a97b;
+  color: #ffffff;
+}
+
+/* Semburat warna tipis di sudut atas halaman area login dan halaman
+   daftar/masuk (semua <main> yang memakai bg-canvas). Landing page tidak
+   terpengaruh. Ubah angka 0.10 kalau mau lebih tipis atau lebih tebal. */
+main.bg-canvas {
+  background-image:
+    radial-gradient(640px 340px at 0% 0%, rgba(22, 169, 123, 0.1), transparent 70%),
+    radial-gradient(640px 340px at 100% 0%, rgba(46, 95, 232, 0.1), transparent 70%);
+  background-repeat: no-repeat;
+}
